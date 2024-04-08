@@ -1,0 +1,189 @@
+/* design system */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+
+    /* colors */
+
+    /* primary */
+
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    /* text configuration */
+    --body-font: "Outfit";
+    ---body-font-weight: 400;
+    --body-font-size: 1rem;
+
+    --title-font: "Young Serif";
+    --title-font-weight: 700;
+
+    --subtitle-font-weight: 600;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--eggshell);
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    font-weight: var(---body-font-weight);
+    /* display: grid;
+    place-content: center;
+    height: 100vh; */
+    color: var(--wenge-brown);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 1.25rem;
+    width: 45rem;
+    margin: auto;
+    margin-top: 1.25rem;
+}
+
+.card__image,.card{
+    border-radius: 0.625rem;
+}
+
+.card__title {
+    color: var(--dark-charcoal);
+    margin-bottom: 1rem;
+    font-family: var(--title-font);
+}
+
+.card__subtitle {
+    line-height: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.card-padding{
+    margin-top: 2rem;
+}
+
+/* card content */
+.card__preparation,
+.card__points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.card__preparation {
+    background-color: var(--rose-white);
+    border-radius: 0.625rem;
+}
+
+.card__points {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.card__points:last-child {
+    border-bottom: none;
+}
+
+.card__subtitle-dark-raspberry {
+    color: var(--dark-raspberry);
+}
+
+.card__subtitle-nutmeg {
+    color: var(--nutmeg);
+    font-family: var(--title-font);
+}
+
+.card__list {
+    padding-left: 1.4rem;
+}
+
+
+.card__item {
+    margin-bottom: 0.938rem;
+    padding-left: 0.625rem;
+}
+
+/* table */
+.card__table {
+    width: 100%;
+    text-align: start;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+.card__row {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.card__row:last-child {
+    border-bottom: none;
+}
+
+.card__cell {
+    padding: 0.625rem;
+}
+
+.card__cell strong {
+    color: var(--nutmeg);
+}
+
+/* attribution */
+.attribution{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--dark-charcoal);
+    font-weight: var(--subtitle-font-weight);
+    
+}
+
+.attribution a{
+    color: var(--nutmeg);
+}
+
+/* media query */
+@media (max-width:768px) {
+
+    .card {
+        width: auto;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .card__image,.card{
+        border-radius: 0;
+    }
+    .card-padding {
+        padding: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .card__preparation {
+        height: 12rem;
+    }
+
+    .card__table {
+        text-align: center;
+    }
+    
+    .attribution{
+        display: none;
+    }
+}
