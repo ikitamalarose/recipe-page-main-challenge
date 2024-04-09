@@ -50,13 +50,14 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    padding: 1.25rem;
+    padding: 1.5rem;
     width: 45rem;
     margin: auto;
     margin-top: 1.25rem;
 }
 
-.card__image,.card{
+.card__image,
+.card {
     border-radius: 0.625rem;
 }
 
@@ -72,7 +73,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.card-padding{
+.card-padding {
     margin-top: 2rem;
 }
 
@@ -113,6 +114,11 @@ body {
 }
 
 
+.card__list li::marker {
+    color: var(--nutmeg);
+    font-weight: var(--title-font-weight);
+}
+
 .card__item {
     margin-bottom: 0.938rem;
     padding-left: 0.625rem;
@@ -143,7 +149,7 @@ body {
 }
 
 /* attribution */
-.attribution{
+.attribution {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -151,10 +157,10 @@ body {
 
     color: var(--dark-charcoal);
     font-weight: var(--subtitle-font-weight);
-    
+
 }
 
-.attribution a{
+.attribution a {
     color: var(--nutmeg);
 }
 
@@ -167,9 +173,11 @@ body {
         margin-top: 0;
     }
 
-    .card__image,.card{
+    .card__image,
+    .card {
         border-radius: 0;
     }
+
     .card-padding {
         padding: 1.25rem;
         margin-top: 1rem;
@@ -182,8 +190,8 @@ body {
     .card__table {
         text-align: center;
     }
-    
-    .attribution{
+
+    .attribution {
         display: none;
     }
 }
